@@ -1,0 +1,20 @@
+# Requirements for {{ cookiecutter.repo_name }}
+
+# Django (1.8 is a long-term support release)
+Django==1.8
+
+# Third-party app dependencies
+django-bootstrap3
+django-forms-bootstrap
+psycopg2
+whitenoise
+
+# Production dependencies
+dj-database-url
+gunicorn
+
+# Test dependencies
+coverage
+mock
+model-mommy
+six

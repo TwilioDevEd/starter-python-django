@@ -1,0 +1,5 @@
+{
+    "repo_name": "your-use-case-django",
+    "database_name": "{{ cookiecutter.repo_name|replace('-', '_') }}",
+    "project_name": "{{ ' '.join(cookiecutter.repo_name.split('-')[:-1]).title() }}"
+}

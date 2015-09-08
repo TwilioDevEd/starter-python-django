@@ -1,0 +1,74 @@
+# {{ cookiecutter.project_name }}
+
+[![Build Status](https://travis-ci.org/TwilioDevEd/{{ cookiecutter.repo_name }}.svg?branch=master)](https://travis-ci.org/TwilioDevEd/{{ cookiecutter.repo_name }})
+[![Coverage Status](https://coveralls.io/repos/TwilioDevEd/{{ cookiecutter.repo_name }}/badge.svg?branch=master&service=github)](https://coveralls.io/github/TwilioDevEd/{{ cookiecutter.repo_name }}?branch=master)
+
+*Include 2-3 sentences here describing this sample app and what it does.*
+
+## Quickstart
+
+### Heroku
+
+The easiest way to run this app is by deploying it to [Heroku](https://www.heroku.com/). You can run this app for free in minutes:
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/TwilioDevEd/{{ cookiecutter.repo_name }})
+
+### Local development
+
+This project is built using the [Django](https://www.djangoproject.com/) web framework. It runs on Python 2.7+ and Python 3.4+.
+
+To run the app locally, first clone this repository and `cd` into its directory. Then:
+
+1. Create a new virtual environment:
+    - If using vanilla [virtualenv](https://virtualenv.pypa.io/en/latest/):
+
+        ```
+        virtualenv venv
+        source venv/bin/activate
+        ```
+
+    - If using [virtualenvwrapper](https://virtualenvwrapper.readthedocs.org/en/latest/):
+
+        ```
+        mkvirtualenv {{ cookiecutter.repo_name }}
+        ```
+
+1. Install the requirements:
+
+    ```
+    pip install -r requirements.txt
+    ```
+
+1. Start a local PostgreSQL database and create a database called `{{ cookiecutter.database_name }}`:
+    - If on a Mac, we recommend [Postgres.app](http://postgresapp.com/). After install, open psql and run `CREATE DATABASE {{ cookiecutter.database_name }};`
+    - If Postgres is already installed locally, you can just run `createdb {{ cookiecutter.database_name }}` from a terminal
+
+1. Run the migrations with:
+
+    ```
+    python manage.py migrate
+    ```
+
+1. Optionally create a superuser so you can access the Django admin:
+
+    ```
+    python manage.py createsuperuser
+    ```
+
+1. Copy the `.env_example` file to `.env`, and edit it to include your Twilio API credentials (found at https://www.twilio.com/user/account/voice)
+1. Run `source .env` to apply the environment variables (or even better, use [autoenv](https://github.com/kennethreitz/autoenv))
+1. Start the development server
+
+    ```
+    python manage.py runserver
+    ```
+
+## Run the tests
+
+You can run the tests locally through [coverage](http://coverage.readthedocs.org/):
+
+```
+$ coverage run manage.py test --settings=twilio_sample_project.settings.test
+```
+
+You can then view the results with `coverage report` or build an HTML report with `coverage html`.
