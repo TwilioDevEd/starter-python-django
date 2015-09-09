@@ -10,7 +10,6 @@ psycopg2
 whitenoise
 
 # Production dependencies
-dj-database-url
 gunicorn
 
 # Test dependencies

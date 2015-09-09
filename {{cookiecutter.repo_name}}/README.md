@@ -7,14 +7,6 @@
 
 ## Quickstart
 
-### Heroku
-
-The easiest way to run this app is by deploying it to [Heroku](https://www.heroku.com/). You can run this app for free in minutes:
-
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/TwilioDevEd/{{ cookiecutter.repo_name }})
-
-### Local development
-
 This project is built using the [Django](https://www.djangoproject.com/) web framework. It runs on Python 2.7+ and Python 3.4+.
 
 To run the app locally, first clone this repository and `cd` into its directory. Then:

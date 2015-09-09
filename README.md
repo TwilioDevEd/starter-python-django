@@ -32,17 +32,7 @@ before you publish your tutorial:
 ### Twilio credentials
 
 Not all our apps need to make Twilio REST API calls. If that's yours, be sure
-to remove the API credentials from `.env_example` and `app.json`.
-
-### Heroku button
-
-If your tutorial is a rare instance that's incompatible with
-Heroku, remove the production dependencies in `requirements.txt` along with
-these files:
-
-- `Procfile`
-- `app.json`
-- `runtime.txt`
+to remove the API credentials from `.env_example`.
 
 ### Bootstrap
 
